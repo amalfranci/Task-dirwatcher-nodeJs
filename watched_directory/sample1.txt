@@ -1,0 +1,2 @@
+This is a sample file containing the MAGIC_STRING .
+hello iam  this is very MAGIC_STRING

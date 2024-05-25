@@ -1,10 +1,19 @@
 const express = require('express')
 require('dotenv').config()
+const connectDB = require('./utils/database.js')
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const  taskRoutes= require('./Routes/taskRoutes.js')
 
 
 
 const app = express();
 const port = process.env.PORT || 3000; 
+
+connectDB();
+
+app.use(bodyParser.json())
+app.use('/api/tasks',taskRoutes)
 
 
 
