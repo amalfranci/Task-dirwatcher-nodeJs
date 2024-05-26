@@ -108,9 +108,10 @@ For more examples, please refer to the Documentation ([API Specification Doc](ht
 
 # Database Design
 
-  check [show](https://drive.google.com/file/d/1a49l7YmMLa_e-uHE7X4VUpFtlxgUo_Mx/view?usp=sharing)
+ please check [show](https://drive.google.com/file/d/1a49l7YmMLa_e-uHE7X4VUpFtlxgUo_Mx/view?usp=sharing)
+ 
 
-### Using Postman
+## Using Postman
 
 Postman is a popular tool to test and develop APIs. You can use it to test the DirWatcher API by following these steps:
 
