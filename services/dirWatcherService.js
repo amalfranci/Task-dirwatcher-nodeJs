@@ -1,7 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const schedule = require('node-schedule')
-const TaskRun =require('../models/TaskRun')
+const TaskRun = require('../models/TaskRun')
+const mongoose = require('mongoose')
+const logger = require('../utils/logger')
 
 
 let currentTask;
@@ -10,21 +12,27 @@ let job;
 const startTask = (task) => {
     
     if (job) job.cancel();
-    currentTask = task || {
-        watchDirectory: process.env.WATCH_DIRECTORY,
-        interval: parseInt(process.env.INTERVAL),
-        magicString: process.env.MAGIC_STRING
+
+   currentTask = {
+        watchDirectory: task.watchDirectory || process.env.WATCH_DIRECTORY,
+        interval: task.interval || parseInt(process.env.INTERVAL),
+        magicString: task.magicString || process.env.MAGIC_STRING,
+        _id: task._id || new mongoose.Types.ObjectId()
     };
+
+  
     job = schedule.scheduleJob(`*/${currentTask.interval / 1000} * * * * *`, async () => {
         
         await executeTask()
     })
+    logger.info('Directory watch Task Started')
     console.log("Directory watch task started")
 }
 
 const stopTask = () => {
     if (job) {
         job.cancel()
+        logger.info('Directory watch task stoped')
         console.log("Directory watch task stopped")
     }
 }
@@ -36,7 +44,7 @@ const restartTask = (task) => {
 
 const executeTask = async () => {
     
-    const taskRun = new TaskRun({ taskId: currentTask._id, startTime: new Date() })
+    const taskRun = new TaskRun({ taskId: currentTask._id,startTime: new Date() })
     const watchDirectory = path.resolve(currentTask.watchDirectory);
     let filesAdded = []
     let filesDeleted = [];
@@ -61,17 +69,11 @@ const executeTask = async () => {
         taskRun.filesDeleted = filesDeleted;
         taskRun.magicStringCount = magicStringCount;
         taskRun.status = 'success';
-
-
-
-
-        
-
-    }
+ }
     catch (err)
     {
         taskRun.status = 'failed';
-        console.log(err)
+          logger.error(err.message);
     }
     finally {
         await taskRun.save()

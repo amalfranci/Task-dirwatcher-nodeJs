@@ -1,4 +1,7 @@
+
+
 const Task = require('../models/Task')
+
 
 const dirWatcherService = require('../services/dirWatcherService')
 const TaskRun = require('../models/TaskRun')
@@ -29,4 +32,40 @@ exports.configureTask = async (req, res) => {
     }
 }
 
+exports.getTaskRuns = async (req, res) => {
+    
+    try {
+        const taskRuns = await TaskRun.find();
+        res.status(200).json(taskRuns)
+        
+    }
+    catch (error)
+    {
+        res.status(500).json({message:"Server error",error})
+    }
+}
+
+exports.startTask = (req, res) => {
+    try {
+        const task = req.body;
+        console.log(task)
+        dirWatcherService.startTask(task)
+        res.status(200).json({message:'Task started manually'})
+    }
+    catch (error)
+    {
+        res.status(500).json({message:"Server error",error})
+    }
+}
+
+exports.stopTask = (req, res) => {
+    try {
+        dirWatcherService.stopTask();
+        res.status(200).json({message:"Task stopped manually"})
+    }
+    catch (error)
+    {
+        res.status(500).json({message:"Server error",error})
+    }
+}
 

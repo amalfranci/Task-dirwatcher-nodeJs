@@ -3,7 +3,8 @@ require('dotenv').config()
 const connectDB = require('./utils/database.js')
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const  taskRoutes= require('./Routes/taskRoutes.js')
+const taskRoutes = require('./Routes/taskRoutes.js')
+const logger = require('./utils/logger.js')
 
 
 
@@ -15,7 +16,7 @@ connectDB();
 app.use(bodyParser.json())
 app.use('/api/tasks',taskRoutes)
 
-
+app.use(morgan('combined',{stream:logger.stream}))
 
 app.listen(port, () => {
     
