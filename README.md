@@ -60,6 +60,39 @@ mkdir watched_directory
 (Optional) Add some sample files to the watched directory:
 
 
+Using Winston for Logging
+
+Winston is a versatile logging library for Node.js. It allows for multiple transports, which can be used to log information to different destinations, such as the console, files, or remote logging services.
+
+
+<img width="898" alt="winston" src="https://github.com/amalfranci/Task-dirwatcher-nodeJs/assets/65619344/71a89df1-8838-479e-aaf1-c89d805b635a">
+
+
+Installing Winston
+
+To use Winston in your DirWatcher project, you first need to install it:
+
+```sh
+npm install Winston
+
+```
+
+Using Winston
+
+You can now use the logger in your application files. For example, in your main application file:
+
+```sh
+
+// app.js
+const logger = require('./logger');
+
+// Example usage
+logger.info('Application started');
+logger.error('An error occurred');
+
+```
+
+
 Start the application:
 
 ```sh
