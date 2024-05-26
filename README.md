@@ -154,10 +154,11 @@ URL: http://localhost:3000/api/tasks/runs
 
 ## Contact
 
-Your Name - [Amal Francis](https://www.linkedin.com/in/amalfrancis744/) - Linkedin
-Gmail -[amalfrancis744@gmail.com]
+[Amal Francis](https://www.linkedin.com/in/amalfrancis744/)
 
-Project Link: [https://github.com/amalfranci](https://github.com/amalfranci)
+Gmail -[amalfrancis744@gmail.com](amalfrancis744@gmail.com)
+
+Git : [https://github.com/amalfranci](https://github.com/amalfranci)
 
 
 
