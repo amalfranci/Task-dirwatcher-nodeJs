@@ -57,10 +57,10 @@ PORT=3000
 ```sh
 mkdir watched_directory
 ```
-(Optional) Add some sample files to the watched directory:
+ Add some sample files to the watched directory:
 
 
-Using Winston for Logging
+## Using Winston for Logging
 
 Winston is a versatile logging library for Node.js. It allows for multiple transports, which can be used to log information to different destinations, such as the console, files, or remote logging services.
 
