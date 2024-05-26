@@ -106,6 +106,10 @@ Once the application is running, it will automatically monitor the specified dir
 
 For more examples, please refer to the Documentation ([API Specification Doc](https://docs.google.com/document/d/1DplxnKj0by-YCNaV7KEdKjuS0DCNcOPE/edit?usp=sharing&ouid=108635337891655763555&rtpof=true&sd=true))
 
+# Database Design
+
+  check [show](https://drive.google.com/file/d/1a49l7YmMLa_e-uHE7X4VUpFtlxgUo_Mx/view?usp=sharing)
+
 ### Using Postman
 
 Postman is a popular tool to test and develop APIs. You can use it to test the DirWatcher API by following these steps:
@@ -146,6 +150,14 @@ URL: http://localhost:3000/api/tasks/stop
 
 Method: GET
 URL: http://localhost:3000/api/tasks/runs
+
+## Contact
+
+Your Name - [Amal Francis](https://www.linkedin.com/in/amalfrancis744/) - Linkedin
+Gmail -[amalfrancis744@gmail.com]
+
+Project Link: [https://github.com/amalfranci](https://github.com/amalfranci)
+
 
 
 
