@@ -93,14 +93,15 @@ logger.error('An error occurred');
 ```
 
 
-Start the application:
+## Start the application
 
 ```sh
 npm start
 ```
 
 <!-- USAGE -->
-Usage
+# Usage
+
 Once the application is running, it will automatically monitor the specified directory and expose the results via the REST API.
 
 For more examples, please refer to the Documentation ([API Specification Doc](https://docs.google.com/document/d/1DplxnKj0by-YCNaV7KEdKjuS0DCNcOPE/edit?usp=sharing&ouid=108635337891655763555&rtpof=true&sd=true))
