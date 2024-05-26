@@ -1,7 +1,8 @@
 # About The Project
 
 DirWatcher is a Node.js application designed to monitor a specified directory for changes at a configured interval. It counts the occurrences of a magic string in the files and logs the details of each run. Results are exposed via a REST API.
-
+# App Working
+  please check [here](https://drive.google.com/file/d/1Fk69sih5-QZL0Iw9FVm9MOi5ns9FPhLx/view?usp=sharing)
 
 # Code Structure
 
