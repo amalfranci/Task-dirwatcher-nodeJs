@@ -71,5 +71,49 @@ Once the application is running, it will automatically monitor the specified dir
 
 For more examples, please refer to the Documentation ([API Specification Doc](https://docs.google.com/document/d/1DplxnKj0by-YCNaV7KEdKjuS0DCNcOPE/edit?usp=sharing&ouid=108635337891655763555&rtpof=true&sd=true))
 
+### Using Postman
+
+Postman is a popular tool to test and develop APIs. You can use it to test the DirWatcher API by following these steps:
+
+Download and Install Postman: If you haven't already, download and install Postman from Postman's official website.
+
+Import the Postman Collection:
+
+Create a new collection in Postman.
+Add requests for each API endpoint.
+
+Example request for configuring a task:
+
+Method: POST
+URL: http://localhost:3000/api/tasks/config
+Body:
+json
+
+```sh
+{
+  "watchDirectory": "./watched_directory",
+  "interval": 60000,
+  "magicString": "MAGIC_STRING"
+}
+```
+
+Send Requests: Use the collection to send requests to your local DirWatcher API and verify the responses.
+
+Save Responses: Save your successful responses in the Postman collection for future reference.
+
+Also 
+
+Method: POST
+URL: http://localhost:3000/api/tasks/start
+
+Method: POST
+URL: http://localhost:3000/api/tasks/stop
+
+Method: GET
+URL: http://localhost:3000/api/tasks/runs
+
+
+
+
 
 
