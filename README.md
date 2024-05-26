@@ -13,7 +13,7 @@ DirWatcher is a Node.js application designed to monitor a specified directory fo
 * [MongoDB](https://www.mongodb.com/)
 * [Winston](https://github.com/winstonjs/winston)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -30,16 +30,16 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/yourusername/dirwatcher.git
+   git clone https://github.com/amalfranci/Task-dirwatcher-nodeJs.git
    cd dirwatcher
 Install NPM packages
 
-sh
+```sh
 Copy code
 npm install
 Create a .env file
-
-sh
+```
+```sh
 Copy code
 touch .env
 Add the following configuration to the .env file:
@@ -48,10 +48,13 @@ env
 Copy code
 DB=mongodb://localhost:27017/dirwatcher
 WATCH_DIRECTORY=./watched_directory
-INTERVAL=60000
+INTERVAL=3000
 MAGIC_STRING=MAGIC_STRING
 PORT=3000
 Create the directory to be watched:
+```
+
+
 
 sh
 Copy code
