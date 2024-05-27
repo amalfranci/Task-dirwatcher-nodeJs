@@ -544,3 +544,5 @@
 2024-05-27T06:55:51.190Z[ERROR]:getaddrinfo ENOTFOUND ac-flg3fce-shard-00-00.n7mqs88.mongodb.net
 2024-05-27T06:55:51.191Z[ERROR]:getaddrinfo ENOTFOUND ac-flg3fce-shard-00-00.n7mqs88.mongodb.net
 2024-05-27T15:52:38.063Z[INFO]:MongoDB connected....
+2024-05-27T16:07:48.599Z[INFO]:Directory watch Task Started
+2024-05-27T16:09:17.249Z[INFO]:Directory watch Task Started
