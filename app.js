@@ -13,7 +13,9 @@ connectDB();
 
 app.use(bodyParser.json());
 app.use("/api/tasks", taskRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the DirWatcher API");
+});
 app.use(morgan("combined", { stream: logger.stream }));
 
 app.listen(port, () => {
