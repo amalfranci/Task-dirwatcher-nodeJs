@@ -47,6 +47,7 @@ const executeTask = async () => {
     startTime: new Date(),
   });
   const watchDirectory = path.resolve(currentTask.watchDirectory);
+  console.log("my newww", watchDirectory);
   let filesAdded = [];
   let filesDeleted = [];
   let magicStringCount = 0;
@@ -64,9 +65,10 @@ const executeTask = async () => {
     for (const file of currentFiles) {
       const filePath = path.join(watchDirectory, file);
       const content = fs.readFileSync(filePath, "utf-8");
+      
       magicStringCount += (
         content.match(new RegExp(currentTask.magicString, "g")) || []
-      ).length;
+      )?.length || 0;
     }
     taskRun.endTime = new Date();
     taskRun.runtime = taskRun.endTime - taskRun.startTime;
@@ -81,5 +83,6 @@ const executeTask = async () => {
     await taskRun.save();
   }
 };
+
 
 module.exports = { startTask, stopTask, restartTask };

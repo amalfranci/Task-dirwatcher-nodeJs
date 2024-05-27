@@ -1,0 +1,3 @@
+this is texting MAGIC_STRING 
+
+this is testing MAGIC_STRING

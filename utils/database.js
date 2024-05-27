@@ -15,16 +15,16 @@ const connectDB = async () => {
 
     
 
-    const task = await Task.findOne();
-    if (task) {
-      dirWatcherService.startTask(task);
-    } else {
-      dirWatcherService.startTask({
-        watchDirectory: process.env.WATCH_DIRECTORY,
-        interval: parseInt(process.env.INTERVAL, 10),
-        magicString: process.env.MAGIC_STRING,
-      });
-    }
+    // const task = await Task.findOne();
+    // if (task) {
+    //   dirWatcherService.startTask(task);
+    // } else {
+    //   dirWatcherService.startTask({
+    //     watchDirectory: process.env.WATCH_DIRECTORY,
+    //     interval: parseInt(process.env.INTERVAL, 10),
+    //     magicString: process.env.MAGIC_STRING,
+    //   });
+    // }
   } catch (err) {
     logger.error(err.message);
     console.log("Failed to connect to MongoDB", err);
