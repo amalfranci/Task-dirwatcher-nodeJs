@@ -14,7 +14,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 app.use(cors({
-  origin: ["https://task-dirwatcher-nodejs.onrender.com/"],
+  origin: ["https://task-dirwatcher-nodejs.onrender.com"],
   credentials:true
 }))
 
